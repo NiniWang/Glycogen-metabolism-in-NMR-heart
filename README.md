@@ -8,4 +8,11 @@
 
 **Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
 
-## Longest transcipt identification
+### Longest transcipt identification
+[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcript base on the annotation files.
+
+### RNA-seq data analysis
+[02.RNA-seq](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for gene expression quatification, DEGs identification and so on.
+
+### Orthologous gene indenfication
+[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all orthologous genes across species.
