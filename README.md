@@ -6,7 +6,6 @@
 >Liver-like glycogen metabolism supports glycolysis in naked mole-rat heart during ischaemia. Amanda Bundgaard, Nini Wang, Iuliia Vyshkvorkina, Maria Sol Jacome Burbano, Maksym Cherevatenko, Theodoros Georgomanolis, Frederik Dethloff, Patrick Giavalisco, Jan-Wilm Lackmann, Gary R Lewin, Christian Frezza and Jane Reznick.
 >Preprint: https://www.biorxiv.org/content/10.1101/2024.06.09.598072v1
 
-**Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
 
 ### Longest transcipt identification
 [01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcript base on the annotation files.
@@ -16,3 +15,6 @@
 
 ### Orthologous gene indenfication
 [03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all orthologous genes across species.
+
+
+**Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
