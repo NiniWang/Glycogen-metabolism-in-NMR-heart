@@ -1,3 +1,0 @@
-The folder contains scripts used for longest transcript identification.
-
-The information in GTF format genome annotation files can slightly different between different versions or species. Specific scripts for handling a particular GTF file may also differ based on these differences. If you intend to use these scripts in your work, you need to make modifications suitable for the specific GTF file you're working with.
