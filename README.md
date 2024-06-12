@@ -1,2 +1,11 @@
 # Glycogen-metablism-in-NMR-heart
-Scripts and Pipelines for RNA-seq and Other Analysis
+**Scripts and Pipelines for RNA-seq and Other Analysis**
+
+>Reference
+>
+>Liver-like glycogen metabolism supports glycolysis in naked mole-rat heart during ischaemia. Amanda Bundgaard, Nini Wang, Iuliia Vyshkvorkina, Maria Sol Jacome Burbano, Maksym Cherevatenko, Theodoros Georgomanolis, Frederik Dethloff, Patrick Giavalisco, Jan-Wilm Lackmann, Gary R Lewin, Christian Frezza and Jane Reznick.
+>Preprint: https://www.biorxiv.org/content/10.1101/2024.06.09.598072v1
+
+**Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
+
+## Longest transcipt identification

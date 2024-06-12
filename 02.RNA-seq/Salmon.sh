@@ -9,4 +9,6 @@ salmon quant -i {file_pathway}/{salmonindex} -l A -g {file_pathway}/{gtf_file} -
 
 #step3
 #merge results from same species
-python merge_info.py
+python merge_info.py -folders {sample1} {sample2} {sample3}  -col NumReads -out merged_{species}_NumReads.csv
+python merge_info.py -folders {sample1} {sample2} {sample3}  -col TPM -out merged_{species}_TPM.csv
+python merge_info.py -folders {sample1} {sample2} {sample3}  -col EffectiveLength -out merged_{species}_EffectiveLength.csv
