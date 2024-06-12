@@ -9,7 +9,7 @@
 
 More information can be found in the directories below:
 ### Longest transcipt identification
-[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcript base on the annotation files.
+[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcripts based on annotation files.
 
 ### RNA-seq data analysis
 [02.RNA-seq](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for gene expression quatification, DEGs identification and so on.
