@@ -1,4 +1,4 @@
-# Glycogen-metablism-in-NMR-heart
+# Glycogen-metabolism-in-NMR-heart
 **Scripts and Pipelines for RNA-seq and Other Analysis**
 
 >Reference
@@ -9,13 +9,13 @@
 
 More information can be found in the directories below:
 ### Longest transcipt identification
-[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcript base on the annotation files.
+[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcript base on the annotation files.
 
 ### RNA-seq data analysis
-[02.RNA-seq](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for gene expression quatification, DEGs identification and so on.
+[02.RNA-seq](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for gene expression quatification, DEGs identification and so on.
 
 ### Orthologous gene indenfication
-[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metablism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all orthologous genes across species.
+[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all orthologous genes across species.
   
     
 ___
