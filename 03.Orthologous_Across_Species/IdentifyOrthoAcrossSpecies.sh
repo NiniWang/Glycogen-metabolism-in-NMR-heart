@@ -15,4 +15,6 @@ python find_reciprocal_hits.py MMtoNMR_protein_blastp.output NMRtoMM_protein_bla
 #Extract the ID information for each species.
 python ExInfoFExInfoFromPep.py {file_pathway}/{species}_pep.all.fa.gz {species}_proteinID_geneID_transID.output
 
-#Merge IDs
+#Merge IDs based on protein ID correspondence
+python mergeIDs.py {species1}_proteinID_geneID_transID.output {species2}_proteinID_geneID_transID.output {species1}_{species2}_reciprocal_hits.output {species1}_{species2}_allIDs_merge.output
+
