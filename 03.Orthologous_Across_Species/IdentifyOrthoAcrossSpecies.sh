@@ -9,5 +9,5 @@ blastp -query {file_pathway}/MM_longest_protein.fa -db {file_pathway}/NMR_longes
 blastp -query {file_pathway}/NMR_longest_protein.fa -db {file_pathway}/MM_longest_protein_db -out {file_pathway}/NMRtoMM_protein_blastp.output -evalue 1e-05  -max_target_seqs 1 -outfmt 6
 
 #step3 merge BLASTP result files and find reciprocal hits
-python filter_fwd_rwd_blast_result.py -fwd {file_pathway}/MMtoNMR_protein_blastp.output -rev {file_pathway}/NMRtoMM_protein_blastp.output -out {file_pathway}/MM_NMR_proteinID_link.output
+python find_reciprocal_hits.py MMtoNMR_protein_blastp.output NMRtoMM_protein_blastp.output MM_NMR_reciprocal_hits.output
 
