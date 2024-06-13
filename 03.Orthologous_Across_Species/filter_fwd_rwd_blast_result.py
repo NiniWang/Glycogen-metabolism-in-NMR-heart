@@ -1,55 +1,51 @@
 import argparse
-import pandas as pd
 
-def process_blast_results(fwd_out_path, rev_out_path, output_path):
-    # Load the BLAST results into Pandas dataframes
-    fwd_results = pd.read_csv(fwd_out_path, sep="\t", header=None)
-    rev_results = pd.read_csv(rev_out_path, sep="\t", header=None)
+def parse_blast_output(file):
+    """
+    Parse BLAST output file in format 6 and return a dictionary with query_id as key and subject_id as value.
+    """
+    blast_dict = {}
+    with open(file, 'r') as f:
+        for line in f:
+            columns = line.strip().split()
+            query_id = columns[0]
+            subject_id = columns[1]
+            blast_dict[query_id] = subject_id
+    return blast_dict
 
-    # Add headers to forward and reverse results dataframes
-    headers = ["query", "subject", "identity", "coverage",
-               "qlength", "slength", "alength",
-               "bitscore", "E-value"]
-    headers = ["query", "subject", "identity", "length", "mismatch", "gapopen",
-               "qstart", "qend", "sstart", "send", "evalue", "bitscore"]
-    fwd_results.columns = headers
-    rev_results.columns = headers
+def find_reciprocal_hits(file1, file2):
+    """
+    Find reciprocal hits between two BLAST output files.
+    """
+    blast1 = parse_blast_output(file1)
+    blast2 = parse_blast_output(file2)
+    
+    reciprocal_hits = []
+    
+    for query_id in blast1:
+        subject_id = blast1[query_id]
+        if subject_id in blast2 and blast2[subject_id] == query_id:
+            reciprocal_hits.append((query_id, subject_id))
+    
+    return reciprocal_hits
 
-    # Create a new column in both dataframes: normalised bitscore
-    fwd_results['norm_bitscore'] = fwd_results.bitscore / fwd_results.qlength
-    rev_results['norm_bitscore'] = rev_results.bitscore / rev_results.qlength
-
-    # Create query and subject coverage columns in both dataframes
-    fwd_results['qcov'] = fwd_results.alength / fwd_results.qlength
-    rev_results['qcov'] = rev_results.alength / rev_results.qlength
-    fwd_results['scov'] = fwd_results.alength / fwd_results.slength
-    rev_results['scov'] = rev_results.alength / rev_results.slength
-
-    # Clip maximum coverage values at 1.0
-    fwd_results['qcov'] = fwd_results['qcov'].clip(upper=1)
-    rev_results['qcov'] = rev_results['qcov'].clip(upper=1)
-    fwd_results['scov'] = fwd_results['scov'].clip(upper=1)
-    rev_results['scov'] = rev_results['scov'].clip(upper=1)
-
-    # Merge forward and reverse results
-    rbbh = pd.merge(fwd_results, rev_results[['query', 'subject']],
-                    left_on='subject', right_on='query',
-                    how='outer')
-
-    # Discard rows that are not RBH
-    rbbh = rbbh.loc[rbbh.query_x == rbbh.subject_y]
-
-    # Group duplicate RBH rows, taking the maximum value in each column
-    rbbh = rbbh.groupby(['query_x', 'subject_x']).max()
-
-    # Save the results to a CSV file
-    rbbh.to_csv(output_path, sep='\t')
+def main():
+    parser = argparse.ArgumentParser(description="Find reciprocal hits between two BLAST output files.")
+    parser.add_argument('file1', type=str, help="First BLAST output file.")
+    parser.add_argument('file2', type=str, help="Second BLAST output file.")
+    parser.add_argument('output', type=str, help="Output file for reciprocal hits.")
+    
+    args = parser.parse_args()
+    
+    file1 = args.file1
+    file2 = args.file2
+    output = args.output
+    
+    reciprocal_hits = find_reciprocal_hits(file1, file2)
+    
+    with open(output, 'w') as f:
+        for query_id, subject_id in reciprocal_hits:
+            f.write(f"{query_id}\t{subject_id}\n")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Process BLAST results and find Reciprocal Best Hits (RBH).")
-    parser.add_argument("-fwd", help="Path to the forward BLAST results file", required=True)
-    parser.add_argument("-rev", help="Path to the reverse BLAST results file", required=True)
-    parser.add_argument("-out", help="Path to the output file", required=True)
-    args = parser.parse_args()
-
-    process_blast_results(args.fwd, args.rev, args.out)
+    main()
