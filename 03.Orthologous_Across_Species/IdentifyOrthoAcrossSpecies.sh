@@ -11,3 +11,8 @@ blastp -query {file_pathway}/NMR_longest_protein.fa -db {file_pathway}/MM_longes
 #step3 merge BLASTP result files and find reciprocal hits
 python find_reciprocal_hits.py MMtoNMR_protein_blastp.output NMRtoMM_protein_blastp.output MM_NMR_reciprocal_hits.output
 
+#step4 Based on the results of reciprocal hits, merge the IDs of different species.
+#Extract the ID information for each species.
+python ExInfoFExInfoFromPep.py {file_pathway}/{species}_pep.all.fa.gz {species}_proteinID_geneID_transID.output
+
+#Merge IDs
