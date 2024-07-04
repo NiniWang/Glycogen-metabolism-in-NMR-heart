@@ -17,8 +17,8 @@ More information can be found in the directories below:
 ### Orthologous gene indenfication
 [03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all orthologous genes across species.
   
-### Plot
-[04.Plot](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/04.plot): This folder contains a collection of scripts for generating various types of plots and visualizations.
+### Plots
+[04.Plots](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/04.plot): This folder contains a collection of scripts for generating various types of plots and visualizations.
 
 ___
 **Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
