@@ -1,5 +1,5 @@
 # Glycogen-metabolism-in-NMR-heart
-**Scripts and Pipelines for RNA-seq and Other Analysis**
+**Scripts and Pipelines for RNA-seq data Analysis**
 
 >Reference
 >
