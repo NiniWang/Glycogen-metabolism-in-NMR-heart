@@ -8,17 +8,17 @@
 
 
 More information can be found in the directories below:
-### Longest transcipt identification
-[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts to identify all longest transcripts based on annotation files.
+### Longest transcript identification
+[01.Longest_Transcript](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/01.Longest_Transcript): Scripts for identifying all longest transcripts based on annotation files.
 
 ### RNA-seq data analysis
-[02.RNA-seq](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for gene expression quatification and DEGs identification.
+[02.RNA-seq](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for RNA-seq gene expression quantification and differentially expressed gene identification.
 
-### Orthologous gene indenfication
-[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline to identify all one-to-one orthologous genes across mouse and naked mole-rat.
+### Orthologous gene identification
+[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline for identifying one-to-one orthologous genes between mouse and naked mole-rat..
   
 ### Plots
-[04.Plots](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/04.plot): This folder contains a collection of scripts for generating various types of plots and visualizations.
+[04.Plots](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/04.plot): Scripts for generating plots and visualizations used in the manuscript.
 
 ___
 **Disclaimer:** While we encourage the reuse of these materials, please note that the code shared here is specifically used for this project and the high-performance computing platform of the Regional Computing Center of the University of Cologne (RRZK). It may require appropriate modifications when used with other datasets.
