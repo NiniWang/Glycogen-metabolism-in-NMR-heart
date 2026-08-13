@@ -15,7 +15,7 @@ More information can be found in the directories below:
 [02.RNA-seq](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/02.RNA-seq): Pipeline for RNA-seq gene expression quantification and differentially expressed gene identification.
 
 ### Orthologous gene identification
-[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline for identifying one-to-one orthologous genes between mouse and naked mole-rat..
+[03.Orthologous_Across_Species](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/03.Orthologous_Across_Species): Pipeline for identifying one-to-one orthologous genes between mouse and naked mole-rat.
   
 ### Plots
 [04.Plots](https://github.com/NiniWang/Glycogen-metabolism-in-NMR-heart/tree/main/04.plot): Scripts for generating plots and visualizations used in the manuscript.
